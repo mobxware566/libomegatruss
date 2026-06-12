@@ -1,4 +1,4 @@
-# dns-stub-11f62f
+# dns-stub-304588
 
 A Rust dns-stub utility.
 
